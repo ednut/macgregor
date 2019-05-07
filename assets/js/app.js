@@ -49,6 +49,21 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
       templateUrl: "partials/donor.html"
     })
 
+    .state("educational", {
+      url: "/educational-outreach",
+      templateUrl: "partials/educational-outreach.html"
+    })
+
+    .state("health", {
+      url: "/health-project",
+      templateUrl: "partials/health-project.html"
+    })
+
+    .state("feed", {
+      url: "/feed-a-child",
+      templateUrl: "partials/feed-a-child.html"
+    })
+
     .state("error", {
       url: "/error",
       templateUrl: "404.html"

@@ -45,7 +45,7 @@ header{
                     font-weight: 500;
                     position: relative;
                     &:hover{
-                        // color: #fff;
+                        color: #000;
                         text-decoration: none;
                     }
                     &:after{
@@ -118,6 +118,16 @@ header{
     .m-wrap{
         border-bottom: 1px solid #e0b78d;
         padding: 2em 0em;
+        &.extra{
+            padding: 5em 0em;  
+        }
+        p{
+            font-size: 17px;
+        }
+        p.title{
+            font-style: italic;
+            color: #373435;
+        }
     }
     .mission-wrap{
         text-align: right;
@@ -189,6 +199,33 @@ header{
             font-size: 16px;
             font-style: italic;
             color: inherit
+        }
+    }
+    &.big{
+        margin-top: 50px;
+        .img{
+            position: relative;
+            width: 23em;
+            height: 23em;
+            border-radius: 50%;
+            border: 10px solid #ffbc36;
+            background-position: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: auto;
+            margin-bottom: 40px;
+            .overlay{
+                position: absolute;
+                left: 0;
+                right: 0;
+                width: 88%;
+                height: 45%;
+                top: 6rem;
+                left: 19px;
+                background: rgba(0, 0, 0, 0.5);
+                color: #fff;
+                padding: 26px 17px;
+            }
         }
     }
 }

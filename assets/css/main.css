@@ -50,6 +50,7 @@ header nav ul li a {
   position: relative;
 }
 header nav ul li a:hover {
+  color: #000;
   text-decoration: none;
 }
 header nav ul li a:after {
@@ -108,6 +109,16 @@ header nav ul li.active a {
 .mission .m-wrap {
   border-bottom: 1px solid #e0b78d;
   padding: 2em 0em;
+}
+.mission .m-wrap.extra {
+  padding: 5em 0em;
+}
+.mission .m-wrap p {
+  font-size: 17px;
+}
+.mission .m-wrap p.title {
+  font-style: italic;
+  color: #373435;
 }
 .mission .mission-wrap {
   text-align: right;
@@ -177,6 +188,33 @@ header nav ul li.active a {
   font-size: 16px;
   font-style: italic;
   color: inherit;
+}
+.project.big {
+  margin-top: 50px;
+}
+.project.big .img {
+  position: relative;
+  width: 23em;
+  height: 23em;
+  border-radius: 50%;
+  border: 10px solid #ffbc36;
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: auto;
+  margin-bottom: 40px;
+}
+.project.big .img .overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 88%;
+  height: 45%;
+  top: 6rem;
+  left: 19px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 26px 17px;
 }
 .sub-section {
   background: #000;
