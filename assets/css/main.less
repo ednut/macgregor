@@ -38,27 +38,32 @@ header{
                 display: inline-block;
                 a{
                     display: inline-block;
-                    margin-left: 10px;
+                    margin-left: 20px;
                     color: black;
                     padding: 10px;
                     text-decoration: none;
                     font-weight: 500;
                     position: relative;
                     &:hover{
-                        color: #fff;
+                        // color: #fff;
                         text-decoration: none;
                     }
                     &:after{
-                        content: "|";
+                        content: " ";
                         right: -11px;
-                        top: 0px;
+                        position: absolute;
+                        top: 9px;
                         font-size: 26px;
+                        border-right: 1px solid #000;
+                        height: 60%;
                     }
+                    
                 }
                 &:last-child{
                     a{
                         &:after{
-                            content: ""
+                            content: "";
+                            border: none;
                         }
                     }
                 }
@@ -79,6 +84,7 @@ header{
     background-position: 100%;
     background-repeat: no-repeat;
     background-size: cover;
+    border-bottom: 10px solid;
     .overlay{
         position: absolute;
         top: 0;
@@ -204,7 +210,7 @@ header{
 
 .sponsor-a-child{
     position: relative;
-    height: 270px;
+    height: 300px;
     .img-sec{
         position: absolute;
         left: 0;
@@ -225,6 +231,23 @@ header{
         background: #ffbc36;
         width: 70%;
         z-index: -1;
+        padding: 3rem 13rem;
+        .info-text{
+            margin-top: 6rem;
+            padding: 0 8rem;
+            text-align: center;
+            font-size: 17px;
+            position: relative;
+            &:after{
+                content: "";
+                position: absolute;
+                bottom: 0;
+                width: 15%;
+                border-bottom: 1px solid #000;
+                left: 19rem;
+                top: 4.5rem;
+            }
+        }
     }
 }
 

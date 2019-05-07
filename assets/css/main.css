@@ -42,7 +42,7 @@ header nav ul li {
 }
 header nav ul li a {
   display: inline-block;
-  margin-left: 10px;
+  margin-left: 20px;
   color: black;
   padding: 10px;
   text-decoration: none;
@@ -50,17 +50,20 @@ header nav ul li a {
   position: relative;
 }
 header nav ul li a:hover {
-  color: #fff;
   text-decoration: none;
 }
 header nav ul li a:after {
-  content: "|";
+  content: " ";
   right: -11px;
-  top: 0px;
+  position: absolute;
+  top: 9px;
   font-size: 26px;
+  border-right: 1px solid #000;
+  height: 60%;
 }
 header nav ul li:last-child a:after {
   content: "";
+  border: none;
 }
 header nav ul li.active a {
   color: #fff;
@@ -73,6 +76,7 @@ header nav ul li.active a {
   background-position: 100%;
   background-repeat: no-repeat;
   background-size: cover;
+  border-bottom: 10px solid;
 }
 .banner .overlay {
   position: absolute;
@@ -188,7 +192,7 @@ header nav ul li.active a {
 }
 .sponsor-a-child {
   position: relative;
-  height: 270px;
+  height: 300px;
 }
 .sponsor-a-child .img-sec {
   position: absolute;
@@ -210,6 +214,23 @@ header nav ul li.active a {
   background: #ffbc36;
   width: 70%;
   z-index: -1;
+  padding: 3rem 13rem;
+}
+.sponsor-a-child .info-sec .info-text {
+  margin-top: 6rem;
+  padding: 0 8rem;
+  text-align: center;
+  font-size: 17px;
+  position: relative;
+}
+.sponsor-a-child .info-sec .info-text:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 15%;
+  border-bottom: 1px solid #000;
+  left: 19rem;
+  top: 4.5rem;
 }
 footer {
   height: 5rem;
