@@ -1,0 +1,121 @@
+<!doctype html>
+<html class="no-js" lang="" ng-app="myApp">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Macgregor</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Italianno|Parisienne" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/main.css" />
+
+    </head>
+    <body ng-controller="generalController">
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        
+        <div id="page-wrapper">
+
+            <!-- Header -->
+                <header>
+					<div class="logo-sec">
+						<div class="container">
+								<a ui-sref="home"><img src="images/MACGREGOR FOUNDATION LOGO.png" alt=""></a>
+						</div>
+					</div>
+					<nav>
+						<ul>
+							<li ng-class="{ active: isActive('/about-the-foundation')}"><a ui-sref="about">About the foundation</a></li>
+							<li ng-class="{ active: isActive('/what-we-do')}"><a ui-sref="whatWeDo">What we do</a></li>
+							<li ng-class="{ active: isActive('/our-projects')}"><a ui-sref="ourProjects">Our projects</a></li>
+							<li ng-class="{ active: isActive('/the-team')}"><a ui-sref="theTeam">The team</a></li>
+							<li ng-class="{ active: isActive('/gallery')}"><a ui-sref="gallery">Gallery</a></li>
+							<li ng-class="{ active: isActive('/donor')}"><a ui-sref="donor">Become a donor</a></li>
+						</ul>
+					</nav>
+                </header>
+
+                <div id="main">
+                    <div ui-view></div>
+                </div>
+                
+
+                <section class="sponsor-a-child">
+                    <div class="img-sec" style="background-image: url('images/5.jpg')"></div>
+                    <div class="info-sec"></div>
+                </section>
+                <div class="sub-section">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="newsletter-info">
+                                    Sign up to receive our charity newsletter, updates and invitation to our events
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="newsletter-form">
+                                    <form>
+                                        <div class="form-group row">
+                                            <div class="col-sm-2"></div>
+                                            <label for="newsletter-info" class="p-0 col-sm-5 col-form-label">Please enter your email here</label>
+                                            <div class="col-sm-5">
+                                            <input type="text" class="form-control d-form" id="newsletter-info" placeholder="Enter your email">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Footer -->
+                <footer id="footer">
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="copywrite">
+                                    C <script>document.write(new Date().getFullYear())</script> The MacGregor Heritage Foundation
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="social">
+                                    <ul>
+                                        <li>Follow us socially to know more about us</li>
+                                        <li class="with-icon"><a href=""><i class="fab fa-twitter"></i></a></li>
+                                        <li class="with-icon"><a href=""><i class="fab fa-instagram"></i></a></li>
+                                        <li class="with-icon"><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                                        <li class="with-icon"><a href=""><i class="fab fa-youtube"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </footer>
+
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="assets/js/angularjs/angular.min.js"></script>
+        <script src="assets/js/angularjs/angular-animate.js"></script>
+        <script src="assets/js/angularjs/angular-ui-router.min.js"></script>
+        <script src="assets/js/app.js"></script>
+        <script src="assets/js/controllers/generalController.js"></script>
+        <script src="assets/js/main.js"></script>
+
+    </body>
+</html>
