@@ -14,6 +14,9 @@ html {
 .p-0 {
   padding: 0;
 }
+#main {
+  overflow: hidden;
+}
 header {
   width: 100%;
   height: auto;
@@ -70,6 +73,53 @@ header nav ul li.active a {
   color: #fff;
   font-weight: 600;
 }
+header .menu-icon {
+  position: absolute;
+  right: 2em;
+  top: 4em;
+  cursor: pointer;
+}
+header .menu-icon i {
+  font-size: 30px;
+}
+.mobile-menu-wrap {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(255, 188, 54, 0.85);
+  z-index: 10;
+  text-align: center;
+  display: none;
+}
+.mobile-menu-wrap.home {
+  padding: 60px 30px;
+  overflow: auto;
+}
+.mobile-menu-wrap .cancel {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  cursor: pointer;
+}
+.mobile-menu-wrap .cancel i {
+  font-size: 40px;
+  color: #fff;
+}
+.mobile-menu-wrap ul {
+  margin: 0;
+  padding: 0;
+}
+.mobile-menu-wrap ul li {
+  display: block;
+  padding-bottom: 20px;
+}
+.mobile-menu-wrap ul li a {
+  display: block;
+  font-size: 30px;
+  color: #fff;
+}
 .banner {
   position: relative;
   width: 100%;
@@ -121,38 +171,67 @@ header nav ul li.active a {
   color: #373435;
 }
 .mission .mission-wrap {
-  text-align: right;
-  border-right: 1px solid #e0b78d;
-  font-size: 21px;
+  text-align: center;
+  font-size: 17px;
+  font-style: italic;
   padding-right: 1em;
+  margin-bottom: 2em;
 }
 .mission .mission-wrap .title {
   position: relative;
-  font-family: 'Parisienne', cursive;
   font-weight: 600;
   padding-bottom: 15px;
 }
-.mission .mission-wrap .title:after {
-  content: "";
-  position: absolute;
-  border-top: 1px solid #e0b78d;
-  width: 14%;
-  bottom: 8px;
-  right: 0;
-}
-.mission .mission-wrap .mission-content {
-  font-family: 'Parisienne', cursive;
+@media (min-width: 768px) {
+  .mission .mission-wrap {
+    text-align: right;
+    border-right: 1px solid #e0b78d;
+    font-size: 17px;
+    font-style: italic;
+    padding-right: 1em;
+    margin-bottom: 0;
+  }
+  .mission .mission-wrap .title {
+    position: relative;
+    font-weight: 600;
+    padding-bottom: 15px;
+  }
+  .mission .mission-wrap .title:after {
+    content: "";
+    position: absolute;
+    border-top: 1px solid #e0b78d;
+    width: 14%;
+    bottom: 8px;
+    right: 0;
+  }
 }
 .mission .content {
   position: relative;
   font-size: 16px;
-  padding-bottom: 10px;
+  padding: 0 10px 10px 10px;
+}
+@media (min-width: 768px) {
+  .mission .content {
+    position: relative;
+    font-size: 16px;
+    padding: 0 0 10px 0;
+  }
 }
 .mission a.read-more {
   display: block;
   color: #e0b78d;
   font-style: italic;
   font-size: 14px;
+  padding: 10px;
+}
+@media (min-width: 768px) {
+  .mission a.read-more {
+    display: block;
+    color: #e0b78d;
+    font-style: italic;
+    font-size: 14px;
+    padding: 0;
+  }
 }
 .project {
   text-align: center;
@@ -178,6 +257,19 @@ header nav ul li.active a {
   background: #ffbc36;
   text-decoration: none;
   font-size: 15px;
+  margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+  .project .action {
+    display: inline-block;
+    padding: 5px 35px;
+    color: #000;
+    border-radius: 15px;
+    background: #ffbc36;
+    text-decoration: none;
+    font-size: 15px;
+    margin-bottom: 0;
+  }
 }
 .project .info {
   margin-top: 30px;
@@ -218,19 +310,42 @@ header nav ul li.active a {
 }
 .sub-section {
   background: #000;
-  height: 5rem;
+  min-height: 5rem;
   color: #fff;
   padding-top: 20px;
 }
+.sub-section .newsletter-form {
+  padding: 10px;
+}
 .sub-section .newsletter-form label {
   line-height: 27px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+@media (min-width: 768px) {
+  .sub-section .newsletter-form label {
+    line-height: 27px;
+    text-align: left;
+    margin-bottom: 0px;
+  }
 }
 .sub-section .newsletter-form input {
   border-radius: 20px;
 }
+@media (min-width: 768px) {
+  .sub-section .newsletter-form {
+    padding: 0;
+  }
+  .sub-section .newsletter-form label {
+    line-height: 27px;
+  }
+  .sub-section .newsletter-form input {
+    border-radius: 20px;
+  }
+}
 .sponsor-a-child {
   position: relative;
-  height: 300px;
+  height: auto;
 }
 .sponsor-a-child .img-sec {
   position: absolute;
@@ -245,30 +360,56 @@ header nav ul li.active a {
   clip-path: polygon(0 0, 100% 0, 78% 100%, 0% 100%);
 }
 .sponsor-a-child .info-sec {
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
+  position: relative;
   background: #ffbc36;
-  width: 70%;
+  width: 100%;
   z-index: -1;
-  padding: 3rem 13rem;
+  padding: 3rem;
+  text-align: center;
 }
 .sponsor-a-child .info-sec .info-text {
-  margin-top: 6rem;
-  padding: 0 8rem;
+  margin-top: 0rem;
+  padding: 0 3rem;
   text-align: center;
   font-size: 17px;
   position: relative;
 }
 .sponsor-a-child .info-sec .info-text:after {
   content: "";
-  position: absolute;
-  bottom: 0;
-  width: 15%;
-  border-bottom: 1px solid #000;
-  left: 19rem;
-  top: 4.5rem;
+}
+@media (min-width: 768px) {
+  .sponsor-a-child .info-sec {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #ffbc36;
+    width: 70%;
+    z-index: -1;
+    padding: 3rem 13rem;
+    text-align: inherit;
+  }
+  .sponsor-a-child .info-sec .info-text {
+    margin-top: 6rem;
+    padding: 0 8rem;
+    text-align: center;
+    font-size: 17px;
+    position: relative;
+  }
+  .sponsor-a-child .info-sec .info-text:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 15%;
+    border-bottom: 1px solid #000;
+    left: 19rem;
+    top: 4.5rem;
+  }
+}
+@media (min-width: 768px) {
+  .sponsor-a-child {
+    height: 300px;
+  }
 }
 footer {
   height: 5rem;
@@ -277,14 +418,21 @@ footer {
 }
 footer .copywrite {
   position: relative;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  footer .copywrite {
+    position: relative;
+    text-align: left;
+  }
 }
 footer .social ul {
   margin: 0;
   padding: 0;
-  text-align: right;
+  text-align: center;
 }
 footer .social ul li {
-  display: inline-block;
+  display: block;
   margin-left: 20px;
 }
 footer .social ul li.with-icon {
@@ -299,8 +447,20 @@ footer .social ul li.with-icon a {
   color: #ffbc36;
   display: inline-block;
   text-align: center;
+  margin-bottom: 10px;
 }
 footer .social ul li.with-icon a i {
   vertical-align: top;
   line-height: 25px;
+}
+@media (min-width: 768px) {
+  footer .social ul {
+    text-align: right;
+  }
+  footer .social ul li {
+    display: inline-block;
+  }
+  footer .social ul li.with-icon a {
+    margin-bottom: 0px;
+  }
 }

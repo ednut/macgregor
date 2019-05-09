@@ -12,6 +12,7 @@
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
         <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Italianno|Parisienne" rel="stylesheet">
         <link rel="stylesheet" href="assets/css/main.css" />
@@ -27,13 +28,14 @@
         <div id="page-wrapper">
 
             <!-- Header -->
-                <header>
+                <header class="home">
 					<div class="logo-sec">
 						<div class="container">
-								<a ui-sref="home"><img src="images/MACGREGOR FOUNDATION LOGO.png" alt=""></a>
+                                <a ui-sref="home"><img src="images/MACGREGOR FOUNDATION LOGO.png" alt=""></a>
+                                <span class="d-md-none menu-icon"><i class="fas fa-bars"></i></span>
 						</div>
 					</div>
-					<nav>
+					<nav class="d-none d-lg-block">
 						<ul>
 							<li ng-class="{ active: isActive('/about-the-foundation')}"><a ui-sref="about">About the foundation</a></li>
 							<li ng-class="{ active: isActive('/what-we-do')}"><a ui-sref="whatWeDo">What we do</a></li>
@@ -42,8 +44,21 @@
 							<li ng-class="{ active: isActive('/gallery')}"><a ui-sref="gallery">Gallery</a></li>
 							<li ng-class="{ active: isActive('/donor')}"><a ui-sref="donor">Become a donor</a></li>
 						</ul>
-					</nav>
+                    </nav>
                 </header>
+
+                <div class="mobile-menu-wrap home d-md-none">
+                    <span class="cancel"><i class="fa fa-times" aria-hidden="true"></i></span>
+                    <ul>
+                        <li><a class="close-me clearfix animate bounceIn"  ui-sref="home"><span class="text">Home</span></a></li>
+                        <li><a class="close-me clearfix animate bounceIn"  ui-sref="about"><span class="text">About the foundation</span></a></li>
+                        <li><a class="close-me clearfix animate bounceIn"  ui-sref="whatWeDo"><span class="text">What we do</span></a></li>
+                        <li><a class="close-me clearfix animate bounceIn"  ui-sref="ourProjects"><span class="text">Our projects</span></a></li>
+                        <li><a class="close-me clearfix animate bounceIn"  ui-sref="theTeam"><span class="text">The team</span></a></li>
+                        <li><a class="close-me clearfix animate bounceIn"  ui-sref="gallery"><span class="text">Gallery</span></a></li>
+                        <li><a class="close-me clearfix animate bounceIn"  ui-sref="donor"><span class="text">Become a donor</span></a></li>
+                    </ul>
+                </div>
 
                 <div id="main">
                     <div ui-view></div>
@@ -51,7 +66,7 @@
                 
 
                 <section class="sponsor-a-child">
-                    <div class="img-sec" style="background-image: url('images/5.jpg')"></div>
+                    <div class="img-sec d-none d-lg-block" style="background-image: url('images/5.jpg')"></div>
                     <div class="info-sec">
                         <div class="info-text">
                             Allow God to work through you in the life of a child in poverty. <strong>Sponsor a child</strong>, today
@@ -120,6 +135,18 @@
         <script src="assets/js/app.js"></script>
         <script src="assets/js/controllers/generalController.js"></script>
         <script src="assets/js/main.js"></script>
+
+        <script>
+        
+            $(".menu-icon").click(function(){
+                    $(".mobile-menu-wrap").show()
+                });
+
+            $(".mobile-menu-wrap .cancel, .close-me",).click(function(){
+                $(".mobile-menu-wrap").hide(500)
+            });
+        
+        </script>
 
     </body>
 </html>
