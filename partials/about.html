@@ -4,23 +4,24 @@
     }
 </style>
 <header class="about">
-        <div class="logo-sec">
-            <div class="container">
-                    <a ui-sref="home"><img src="images/MACGREGOR FAMILY LOGO.png" alt=""></a>
-                    <span class="d-md-none menu-icon"><i class="fas fa-bars"></i></span>
-            </div>
+    <div class="logo-sec">
+        <div class="container">
+                <a ui-sref="home"><img src="images/MACGREGOR FAMILY LOGO.png" alt=""></a>
+                <span class="d-md-none menu-icon"><i class="fas fa-bars"></i></span>
         </div>
-        <nav>
-            <ul>
-                <li ng-class="{ active: isActive('/about-the-foundation')}"><a ui-sref="about">About the foundation</a></li>
-                <li ng-class="{ active: isActive('/what-we-do')}"><a ui-sref="whatWeDo">What we do</a></li>
-                <li ng-class="{ active: isActive('/our-projects')}"><a ui-sref="ourProjects">Our projects</a></li>
-                <li ng-class="{ active: isActive('/the-team')}"><a ui-sref="theTeam">The team</a></li>
-                <li ng-class="{ active: isActive('/gallery')}"><a ui-sref="gallery">Gallery</a></li>
-                <li ng-class="{ active: isActive('/donor')}"><a ui-sref="donor">Become a donor</a></li>
-            </ul>
-        </nav>
-    </header>
+    </div>
+    <nav class="d-none d-lg-block">
+        <ul>
+            <li ng-class="{ active: isActive('/about-the-foundation')}"><a ui-sref="about">About the foundation</a></li>
+            <li ng-class="{ active: isActive('/what-we-do')}"><a ui-sref="whatWeDo">What we do</a></li>
+            <li ng-class="{ active: isActive('/our-projects')}"><a ui-sref="ourProjects">Our projects</a></li>
+            <li ng-class="{ active: isActive('/the-team')}"><a ui-sref="theTeam">The team</a></li>
+            <li ng-class="{ active: isActive('/gallery')}"><a ui-sref="gallery">Gallery</a></li>
+            <li ng-class="{ active: isActive('/donor')}"><a ui-sref="donor">Become a donor</a></li>
+        </ul>
+    </nav>
+</header>
+
 
 
 <section class="banner" style="background-image: url('images/6.jpg')">
