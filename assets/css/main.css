@@ -334,6 +334,16 @@ header .menu-icon i {
   color: #fff;
   padding-top: 20px;
 }
+.sub-section .newsletter-info {
+  text-align: center;
+  padding: 15px 0;
+}
+@media (min-width: 768px) {
+  .sub-section .newsletter-info {
+    text-align: left;
+    padding: 0;
+  }
+}
 .sub-section .newsletter-form {
   padding: 10px;
 }
